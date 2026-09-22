@@ -1,0 +1,46 @@
+$date
+	Tue Sep 22 22:27:28 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module encoder_8_to_3_tb $end
+$var reg 8 ! in [7:0] $end
+$upscope $end
+$scope module encoder_8_to_3_tb $end
+$var wire 3 " out [2:0] $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 "
+b1 !
+$end
+#10000
+b1 "
+b10 !
+#20000
+b10 "
+b100 !
+#30000
+b11 "
+b1000 !
+#40000
+b100 "
+b10000 !
+#50000
+b101 "
+b100000 !
+#60000
+b110 "
+b1000000 !
+#70000
+b111 "
+b10000000 !
+#80000
