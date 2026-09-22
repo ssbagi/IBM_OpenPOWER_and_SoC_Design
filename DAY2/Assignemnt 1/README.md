@@ -108,6 +108,8 @@ The compilation and simulation output verifies that the logic gate testbench run
 
 The generated `logic_gates_tb.vcd` file can be opened in a waveform viewer. The waveform shows input signals `a` and `b`, along with the outputs of AND, NAND, OR, NOR, NOT, XOR, and XNOR gates over time.
 
+The testbench cycles through all four two-input combinations: `00`, `01`, `10`, and `11`. Each output changes according to its Boolean function whenever either input changes. For example, AND is high only for `11`, OR is high for `01`, `10`, and `11`, XOR is high when the inputs differ, and XNOR is high when they match. The NOT output always shows the inverse of `a`.
+
 ![Logic gates simulation waveform](logic_gates_simulation_vcd.png)
 
 ## Expected Logic Gate Results
@@ -153,7 +155,9 @@ The following screenshots show compilation and simulation output for the 2:1 mul
 
 ## 2:1 MUX Simulation Waveform
 
-The generated MUX `.vcd` files can be opened in the waveform viewer to verify that the output `y` changes according to input signals `a`, `b`, and select signal `sel`.
+The generated MUX `.vcd` files can be opened in the waveform viewer to verify that the output `y` changes according to input signals `a`, `b`, and select signal `sel`. The waveform contains separate traces for the data inputs, select signal, and output, allowing the behavior of each modelling style to be compared.
+
+When `sel` changes, `y` follows the input selected by that particular implementation. For the standard MUX implementations, `sel=0` selects `a` and `sel=1` selects `b`; the ternary, behavioral, and case versions document their file-specific conventions in the table above. The output changes immediately after an input or select transition because these are combinational circuits with no clock. The gate-level waveform may show short delta-cycle transitions while the `not`, `and`, and `or` primitives settle; these are simulation events, not intentional time delays.
 
 ![MUX simulation waveform](mux_verilog_codes_simulation_vcd.png)
 
