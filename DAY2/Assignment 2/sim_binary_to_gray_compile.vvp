@@ -1,0 +1,46 @@
+#! /mingw64/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\msys64\mingw64\lib\ivl\system.vpi";
+:vpi_module "C:\msys64\mingw64\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\msys64\mingw64\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\msys64\mingw64\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\msys64\mingw64\lib\ivl\va_math.vpi";
+:vpi_module "C:\msys64\mingw64\lib\ivl\v2009.vpi";
+S_00000140aa026640 .scope package, "$unit" "$unit" 2 1;
+ .timescale 0 0;
+S_00000140aa0267d0 .scope module, "binary_to_gray" "binary_to_gray" 3 6;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "binary";
+    .port_info 1 /OUTPUT 4 "gray";
+L_00000140aa00ef50 .functor XOR 1, L_00000140aa056480, L_00000140aa056520, C4<0>, C4<0>;
+L_00000140aa0585e0 .functor XOR 1, L_00000140aa0559e0, L_00000140aa055f80, C4<0>, C4<0>;
+L_00000140aa0568f0 .functor XOR 1, L_00000140aa055bc0, L_00000140aa056200, C4<0>, C4<0>;
+v00000140aa026e30_0 .net *"_ivl_10", 0 0, L_00000140aa00ef50;  1 drivers
+v00000140aa026960_0 .net *"_ivl_15", 0 0, L_00000140aa0559e0;  1 drivers
+v00000140aa026a00_0 .net *"_ivl_17", 0 0, L_00000140aa055f80;  1 drivers
+v00000140aa055180_0 .net *"_ivl_18", 0 0, L_00000140aa0585e0;  1 drivers
+v00000140aa055220_0 .net *"_ivl_24", 0 0, L_00000140aa055bc0;  1 drivers
+v00000140aa0552c0_0 .net *"_ivl_26", 0 0, L_00000140aa056200;  1 drivers
+v00000140aa055360_0 .net *"_ivl_27", 0 0, L_00000140aa0568f0;  1 drivers
+v00000140aa055400_0 .net *"_ivl_3", 0 0, L_00000140aa0557b0;  1 drivers
+v00000140aa0554a0_0 .net *"_ivl_7", 0 0, L_00000140aa056480;  1 drivers
+v00000140aa0555d0_0 .net *"_ivl_9", 0 0, L_00000140aa056520;  1 drivers
+o00000140aa05b188 .functor BUFZ 4, C4<zzzz>; HiZ drive
+v00000140aa055670_0 .net "binary", 3 0, o00000140aa05b188;  0 drivers
+v00000140aa055710_0 .net "gray", 3 0, L_00000140aa055d00;  1 drivers
+L_00000140aa0557b0 .part o00000140aa05b188, 3, 1;
+L_00000140aa056480 .part o00000140aa05b188, 3, 1;
+L_00000140aa056520 .part o00000140aa05b188, 2, 1;
+L_00000140aa0559e0 .part o00000140aa05b188, 2, 1;
+L_00000140aa055f80 .part o00000140aa05b188, 1, 1;
+L_00000140aa055d00 .concat8 [ 1 1 1 1], L_00000140aa0568f0, L_00000140aa0585e0, L_00000140aa00ef50, L_00000140aa0557b0;
+L_00000140aa055bc0 .part o00000140aa05b188, 1, 1;
+L_00000140aa056200 .part o00000140aa05b188, 0, 1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "-";
+    ".\3_bit_binary_to_gray.v";
