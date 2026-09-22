@@ -1,0 +1,59 @@
+$date
+	Tue Sep 22 21:17:38 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module mux_2_to_1_gate_level_tb $end
+$var wire 1 ! y $end
+$var reg 1 " a $end
+$var reg 1 # b $end
+$var reg 1 $ sel $end
+$scope module uut $end
+$var wire 1 " a $end
+$var wire 1 # b $end
+$var wire 1 $ sel $end
+$var wire 1 % sel_n $end
+$var wire 1 ! y $end
+$var wire 1 & y1 $end
+$var wire 1 ' y2 $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0'
+0&
+1%
+0$
+0#
+0"
+0!
+$end
+#10
+1#
+#20
+1!
+0%
+1'
+1$
+#30
+1&
+1!
+1%
+0'
+0$
+0#
+1"
+#40
+0!
+0&
+0%
+1$
+#50
