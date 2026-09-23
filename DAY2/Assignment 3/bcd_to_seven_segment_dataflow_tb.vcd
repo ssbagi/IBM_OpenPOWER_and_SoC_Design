@@ -1,0 +1,126 @@
+$date
+	Wed Sep 23 05:54:54 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module bcd_to_seven_segment_dataflow_tb $end
+$var wire 7 ! segment [6:0] $end
+$var reg 4 " bcd [3:0] $end
+$var reg 7 # expected_segment [6:0] $end
+$var integer 32 $ bcd_value [31:0] $end
+$var integer 32 % failure_count [31:0] $end
+$var integer 32 & test_count [31:0] $end
+$scope function expected_segments $end
+$var reg 4 ' digit [3:0] $end
+$upscope $end
+$scope module dut $end
+$var wire 4 ( bcd [3:0] $end
+$var reg 7 ) segment [6:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b111111 )
+b0 (
+bx '
+b0 &
+b0 %
+b0 $
+bx #
+b0 "
+b111111 !
+$end
+#1000
+b110 !
+b110 )
+b1 "
+b1 (
+b1 $
+b1 &
+b111111 #
+b0 '
+#2000
+b1011011 !
+b1011011 )
+b10 "
+b10 (
+b10 $
+b10 &
+b110 #
+b1 '
+#3000
+b1001111 !
+b1001111 )
+b11 "
+b11 (
+b11 $
+b11 &
+b1011011 #
+b10 '
+#4000
+b1100110 !
+b1100110 )
+b100 "
+b100 (
+b100 $
+b100 &
+b1001111 #
+b11 '
+#5000
+b1101101 !
+b1101101 )
+b101 "
+b101 (
+b101 $
+b101 &
+b1100110 #
+b100 '
+#6000
+b1111101 !
+b1111101 )
+b110 "
+b110 (
+b110 $
+b110 &
+b1101101 #
+b101 '
+#7000
+b111 !
+b111 )
+b111 "
+b111 (
+b111 $
+b111 &
+b1111101 #
+b110 '
+#8000
+b1111111 !
+b1111111 )
+b1000 "
+b1000 (
+b1000 $
+b1000 &
+b111 #
+b111 '
+#9000
+b1101111 !
+b1101111 )
+b1001 "
+b1001 (
+b1001 $
+b1001 &
+b1111111 #
+b1000 '
+#10000
+b1010 $
+b1010 &
+b1101111 #
+b1001 '
