@@ -1,0 +1,2 @@
+Command: iverilog -g2012 -o mealy_fsm_detect_1001_tb.vvp mealy_fsm_detect_1001.v mealy_fsm_detect_1001_tb.v
+Compilation successful.

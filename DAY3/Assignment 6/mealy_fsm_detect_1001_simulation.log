@@ -1,0 +1,4 @@
+Command: vvp mealy_fsm_detect_1001_tb.vvp
+VCD info: dumpfile mealy_fsm_detect_1001.vcd opened for output.
+MEALY TEST PASSED: 264 directed/random bits checked
+mealy_fsm_detect_1001_tb.v:81: $finish called at 2665000 (1ps)

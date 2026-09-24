@@ -1,0 +1,2 @@
+Command: iverilog -g2012 -o moore_fsm_detect_1001_overlap_tb.vvp moore_fsm_detect_1001_overlap.v moore_fsm_detect_1001_overlap_tb.v
+Compilation successful.
