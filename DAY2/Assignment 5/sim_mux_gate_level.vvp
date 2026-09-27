@@ -1,0 +1,81 @@
+#! /mingw64/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\msys64\mingw64\lib\ivl\system.vpi";
+:vpi_module "C:\msys64\mingw64\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\msys64\mingw64\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\msys64\mingw64\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\msys64\mingw64\lib\ivl\va_math.vpi";
+S_00000264771eaaf0 .scope module, "mux_2_to_1_gate_level_tb" "mux_2_to_1_gate_level_tb" 2 3;
+ .timescale 0 0;
+v00000264771eb960_0 .var "a", 0 0;
+v00000264772a7160_0 .var "b", 0 0;
+v00000264772a7840_0 .var "sel", 0 0;
+v00000264772a77a0_0 .net "y", 0 0, L_00000264771eba00;  1 drivers
+S_00000264772a9bc0 .scope module, "uut" "mux_2_to_1_gate_level" 2 7, 3 6 0, S_00000264771eaaf0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /INPUT 1 "sel";
+    .port_info 3 /OUTPUT 1 "y";
+L_00000264772a9fd0 .functor NOT 1, v00000264772a7840_0, C4<0>, C4<0>, C4<0>;
+L_0000026477276e20 .functor AND 1, L_00000264772a9fd0, v00000264771eb960_0, C4<1>, C4<1>;
+L_00000264771eb440 .functor AND 1, v00000264772a7840_0, v00000264772a7160_0, C4<1>, C4<1>;
+L_00000264771eba00 .functor OR 1, L_0000026477276e20, L_00000264771eb440, C4<0>, C4<0>;
+v00000264772769e0_0 .net "a", 0 0, v00000264771eb960_0;  1 drivers
+v0000026477276c00_0 .net "b", 0 0, v00000264772a7160_0;  1 drivers
+v0000026477276760_0 .net "sel", 0 0, v00000264772a7840_0;  1 drivers
+v00000264772a9d50_0 .net "sel_n", 0 0, L_00000264772a9fd0;  1 drivers
+v00000264772a9df0_0 .net "y", 0 0, L_00000264771eba00;  alias, 1 drivers
+v00000264772a9e90_0 .net "y1", 0 0, L_0000026477276e20;  1 drivers
+v00000264772a9f30_0 .net "y2", 0 0, L_00000264771eb440;  1 drivers
+    .scope S_00000264771eaaf0;
+T_0 ;
+    %vpi_call 2 10 "$dumpfile", "mux_2_to_1_gate_level_tb.vcd" {0 0 0};
+    %vpi_call 2 11 "$dumpvars", 32'sb00000000000000000000000000000000, S_00000264771eaaf0 {0 0 0};
+    %vpi_call 2 12 "$monitor", "Time = %0t | a=%b b=%b sel=%b | y=%b", $time, v00000264771eb960_0, v00000264772a7160_0, v00000264772a7840_0, v00000264772a77a0_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000264771eb960_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000264772a7160_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000264772a7840_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000264771eb960_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000264772a7160_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000264772a7840_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000264771eb960_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000264772a7160_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000264772a7840_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000264771eb960_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000264772a7160_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000264772a7840_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000264771eb960_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000264772a7160_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000264772a7840_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 19 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "mux_2_to_1_gate_level_tb.v";
+    "./mux_2_to_1_gate_level.v";
